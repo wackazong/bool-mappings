@@ -8,6 +8,7 @@ At the moment there is just one extension: `.true_or()`.
 
 ```rust
 use crate::MyError;
+use bool_mappings::*;
 
 // Turn a bool into a Result
 fn some_fn() -> Result<(), MyError> {
