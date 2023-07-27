@@ -6,6 +6,7 @@
 //!
 //! ```
 //! use crate::MyError;
+//! use bool_mappings::*;
 //!
 //! // Turn a bool into a Result
 //! fn some_fn() -> Result<(), MyError> {
