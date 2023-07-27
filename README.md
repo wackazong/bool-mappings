@@ -2,16 +2,26 @@
 
 Useful extensions to convert `bool` to other Rust types.
 
-At the moment there is just one extension: `.true_or()`.
+At the moment there are two extensions:
 
-## Example
+- `.true_or()`
+- `.false_or()`
+
+## Examples
 
 ```rust
-use crate::MyError;
-use bool_mappings::*;
+use bool_mappings::BoolMappings;
+
+struct MyError;
 
 // Turn a bool into a Result
 fn some_fn() -> Result<(), MyError> {
-    true.true_or(MyError)?
+    true.true_or(MyError)
+}
+
+fn some_other_fn() -> Result<(), MyError> {
+    true.false_or(MyError)
 }
 ```
+
+License: MIT
